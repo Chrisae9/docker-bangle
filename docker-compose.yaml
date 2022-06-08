@@ -1,0 +1,10 @@
+version: "3"
+services:
+  bangle:
+    image: bangle-io:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: "unless-stopped"
+    ports:
+      - 4032:80
